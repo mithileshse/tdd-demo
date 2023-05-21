@@ -61,6 +61,7 @@ public class BankingSystemTest {
 
 
 
+    @Test
     public void testWithDrawInOutOFFunds(){
         double withDrawAmount = 10000;
         double updatedAmount=bankingSystem.withdraw(accountNumber,withDrawAmount);
