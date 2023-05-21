@@ -55,12 +55,17 @@ public class BankingSystemTest {
     @Test(expected = IllegalArgumentException.class)
     public void testWithDrawInSufficientFunds(){
         double withDrawAmount = 10000;
-        when(accountMock.getBalance()).thenReturn(6000.0);
 
         double updatedAmount=bankingSystem.withdraw(accountNumber,withDrawAmount);
     }
 
 
+
+    @Test
+    public void testWithDrawInOutOFFunds(){
+        double withDrawAmount = 10000;
+        double updatedAmount=bankingSystem.withdraw(accountNumber,withDrawAmount);
+    }
 
 
 
